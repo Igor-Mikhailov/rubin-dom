@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider {
+      width: 90%;
+      margin: 100px auto;
+      display: flex;
+      justify-content: center;
+    }
+    .slider_item{
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 288px !important;
+      height: 392px ;
+      background-size: cover;
+      color: #fff;
+    }
+    .item-title{
+      font-family: Futura PT Book;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 1px;
+      font-size: 16px;
+      margin: 32px 32px 0 32px;
+    }
+    .first_item{
+      background-image: url("features/1.png");
+    }
+    .second_item{
+      background-image: url("features/2.png");
+    }
+    .third_item{
+      background-image: url("features/3.png");
+    }
+    .fourth_item{
+      background-image: url("features/4.png");
+    }
+    .fifth_item{
+      background-image: url("features/5.png");
+    }
+    .sixth_item{
+      background-image: url("features/6.png");
+    }
+    .seventh_item{
+      background-image: url("features/7.png");
+    }
+    .eighth_item{
+      background-image: url("features/8.png");
+    }
+
+    .item-text{
+      font-family: Futura PT Book;
+      width: 201px;
+      font-size: 16px;
+      line-height: 150%;
+      margin: 0 0 32px 32px;
+
+    }
+
+    .slick-slide {
+      margin: 20px auto;
+      transition: all ease-in-out .3s;
+    }
+
+    .slick-initialized .slick-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <section class="regular slider">
+    <div class="slider_item first_item">
+      <h4 class="item-title">Экономия времени</h4>
+      <p class="item-text">Нашим клиентам больше не нужно стоять в очередях или отпрашиваться с работы. Мы соберём документы за вас на 30% быстрее</p>
+    </div>
+
+    <div class="slider_item second_item">
+      <h4 class="item-title">Быстрые продажи</h4>
+      <p class="item-text">За счёт использования 20 основных ресурсов нашей рекламы мы продаём объекты быстрее</p>
+    </div>
+
+    <div class="slider_item third_item">
+      <h4 class="item-title">Договор от 30 дней</h4>
+      <p class="item-text">Составляем договор без штрафных санкций и скрытых комиссий</p>
+    </div>
+
+    <div class="slider_item fourth_item">
+      <h4 class="item-title">Работаем по принципу “единого окна”</h4>
+      <p class="item-text">Сокращаем время обслуживания клиента на 40%</p>
+    </div>
+
+    <div class="slider_item fifth_item">
+      <h4 class="item-title">Скидка 5000 рублей</h4>
+      <p class="item-text">При подачи заявки через сайт на получение услуги мы делаем скидку 5000 рублей</p>
+    </div>
+
+    <div class="slider_item sixth_item">
+      <h4 class="item-title">Не переплачивайте</h4>
+      <p class="item-text">Вы можете выбрать необходмые тариф, чтобы остаться в плюсе</p>
+    </div>
+
+    <div class="slider_item seventh_item">
+      <h4 class="item-title">Экономия времени</h4>
+      <p class="item-text">8 лет работы высокомотивированных и ответственных сотрудников, которые работают и по выходным, и по вечерам</p>
+    </div>
+
+    <div class="slider_item eighth_item">
+      <h4 class="item-title">Официально 8 лет на рынке недвижимости</h4>
+      <p class="item-text">Обмен дешевле, чем покупка и продажа квартиры поотдельности</p>
+    </div>
+    
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $('.regular').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: false,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 980,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: false,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 680,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+            }
+          }
+        ]
+      });
+    });
+</script>
+
+</body>
+</html>
